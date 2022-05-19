@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: nacos-config
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        namespace:
+        group: DEFAULT_GROUP
+        username: nacos
+        password: nacos
+        # 共享配置
+        shared-configs[0]:
+          data-id: share-config.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+        # 自定义扩展配置
+        extension-configs[0]:
+          data-id: ext-config.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+      discovery:
+        server-addr: 127.0.0.1:8848
+        endpoint: 127.0.0.1:8848

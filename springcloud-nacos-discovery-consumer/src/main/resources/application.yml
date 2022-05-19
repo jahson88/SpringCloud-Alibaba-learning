@@ -1,0 +1,66 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: nacos-consumer
+  cloud:
+    loadbalancer:
+      nacos:          #ribbon
+        enabled: true
+      ribbon:
+        enabled: false    #must set  else then:No Feign Client for loadBalancing defined. Did you forget to include spring-cloud-starter-netflix-ribbon?
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        username: nacos
+        password: nacos
+        enabled: true
+    sentinel:
+      enabled: true
+      transport:
+        port: 8719
+        dashboard: localhost:8858
+
+#NamingService 配置属性
+nacos:
+  server-addr: 127.0.0.1:8848
+
+  # 调用链 Sleuth + ZipKin
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0 # 采用比例，默认 0.1 全部采样 1.0
+  zipkin:
+    enabled: true
+    base-url: http://192.168.135.1:9411/ # 指定了Zipkin服务器的地址
+    discoveryClientEnabled: false
+    sender:
+      type: web
+
+feign:
+  sentinel:
+    enabled: false    #
+  hystrix:
+    enabled: false
+  client:
+    config:
+      default:
+        #指的是建立连接所用的时间
+        connectTimeout: 2000
+        #指的是建立连接后从服务器读取到可用资源所用的时间
+        readTimeout: 6000
+        loggerLevel: full
+
+# 关闭shiro的 ShiroAnnotationProcessorAutoConfiguration 中的DefaultAdvisorAutoProxyCreator，不需要增强2次，防止出现404
+shiro:
+  annotations:
+    enabled: true
+    # 是否启动shiro
+  enabled: true
+
+logging:
+  level:
+    com.alibaba.cloud: debug
+    org.springframework.cloud.openfeign: debug

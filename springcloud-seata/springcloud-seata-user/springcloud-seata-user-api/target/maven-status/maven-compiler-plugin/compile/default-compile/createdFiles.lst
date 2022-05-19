@@ -1,0 +1,6 @@
+top\lrshuai\seata\feign\user\IUserAccountFeign.class
+top\lrshuai\seata\feign\user\fallback\UserFallbackFactory.class
+top\lrshuai\seata\feign\user\fallback\UserAccountFallbackFactory$1.class
+top\lrshuai\seata\feign\user\fallback\UserAccountFallbackFactory.class
+top\lrshuai\seata\feign\user\IUserFeign.class
+top\lrshuai\seata\feign\user\fallback\UserFallbackFactory$1.class

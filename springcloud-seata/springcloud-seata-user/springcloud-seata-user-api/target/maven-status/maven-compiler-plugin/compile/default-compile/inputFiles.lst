@@ -1,0 +1,4 @@
+E:\java_space\SpringCloud-Alibaba-learning-main\springcloud-seata\springcloud-seata-user\springcloud-seata-user-api\src\main\java\top\lrshuai\seata\feign\user\fallback\UserAccountFallbackFactory.java
+E:\java_space\SpringCloud-Alibaba-learning-main\springcloud-seata\springcloud-seata-user\springcloud-seata-user-api\src\main\java\top\lrshuai\seata\feign\user\IUserAccountFeign.java
+E:\java_space\SpringCloud-Alibaba-learning-main\springcloud-seata\springcloud-seata-user\springcloud-seata-user-api\src\main\java\top\lrshuai\seata\feign\user\IUserFeign.java
+E:\java_space\SpringCloud-Alibaba-learning-main\springcloud-seata\springcloud-seata-user\springcloud-seata-user-api\src\main\java\top\lrshuai\seata\feign\user\fallback\UserFallbackFactory.java

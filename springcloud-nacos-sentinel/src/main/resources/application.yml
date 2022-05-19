@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: nacos-sentinel
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        username: nacos
+        password: nacos
+    sentinel:
+      enabled: true
+      transport:
+        port: 8719
+        dashboard: localhost:8858
+
+#NamingService 配置属性
+nacos:
+  server-addr: 127.0.0.1:8848
+
+
+
+feign:
+  sentinel:
+    enabled: true
+
