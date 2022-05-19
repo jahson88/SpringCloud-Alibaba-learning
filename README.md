@@ -1,5 +1,5 @@
 # SpringCloud-Alibaba-learning
-springcloud-alibaba 学习demo
+springcloud-alibaba 学习demo,基于https://github.com/rstyro/SpringCloud-Alibaba-learning的例子升级依赖包spring cloud 3.0.1，并调试成功
 
 
 http://localhost:8848/nacos/
@@ -75,8 +75,9 @@ Nacos自身提供了SDK和API来完成服务注册与发现等操作，SDK本质
                     第二种：基于DatagramSocket的UDP协议，实现服务端的主动推送
 
 
+# application.yml配置文件
 
-
+```code
 spring:
   profiles:
     # 对应环境
@@ -138,7 +139,7 @@ spring:
           refresh: true
         # 支持多个扩展 Data Id 的配置 ，优先级小于prefix+dev.yaml
         # extension-configs:
-
+```
 
 
 # NamingService  配置属性    与上面的路径不同，估计是版本问题。
@@ -150,6 +151,7 @@ spring:
 
 
 # feign config
+```code
 feign:
   client:
     config:
@@ -176,7 +178,7 @@ feign:
 
 
 spring.cloud.loadbalancer.nacos.enabled
-
+```
 
 
 
